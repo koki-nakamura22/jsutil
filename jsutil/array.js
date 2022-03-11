@@ -6,8 +6,8 @@ function removeDuplicates(arr) {
   return [...new Set(arr)];
 }
 
-function isNotEmpty(arr) {
-  return Array.isArray(arr) && arr.length > 0;
+function isEmptyArray(arr) {
+  return Array.isArray(arr) && arr.length === 0;
 }
 
 function devideArray(baseArr, numOfDiv) {
@@ -21,4 +21,4 @@ function devideArray(baseArr, numOfDiv) {
   return newArr;
 }
 
-export { shuffleArray, removeDuplicates, isNotEmpty, devideArray };
+export { shuffleArray, removeDuplicates, isEmptyArray, devideArray };
