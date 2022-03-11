@@ -10,4 +10,14 @@ function getQueryParameters(urlStr) {
   return JSON.stringify(params);
 }
 
-export { getQueryParameters };
+function getQueryParameter(urlStr, paramName) {
+  const url = new URL(urlStr);
+  return url.searchParams.get(paramName);
+}
+
+function getQueryParameterCurrentURL(paramName) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(paramName);
+}
+
+export { getQueryParameters, getQueryParameter, getQueryParameterCurrentURL };
