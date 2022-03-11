@@ -6,4 +6,12 @@ function detectDeviceType() {
     : "Desktop";
 }
 
-export { detectDeviceType };
+function isMobile() {
+  return detectDeviceType() === "Mobile";
+}
+
+function isDesktop() {
+  return detectDeviceType() === "Desktop";
+}
+
+export { detectDeviceType, isMobile, isDesktop };
