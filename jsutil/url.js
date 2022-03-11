@@ -1,13 +1,13 @@
 function getQueryParameters(url) {
-  URL = JSON.parse(
+  url = JSON.parse(
     '{"' +
-      decodeURI(URL.split("?")[1])
+      decodeURI(url.split("?")[1])
         .replace(/"/g, '\\"')
         .replace(/&/g, '","')
         .replace(/=/g, '":"') +
       '"}'
   );
-  return JSON.stringify(URL);
+  return JSON.stringify(url);
 }
 
 export { getQueryParameters };
