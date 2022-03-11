@@ -21,10 +21,17 @@ function scrollToBottom(element) {
   element.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
+function hideElement(element, removeFromFlow = false) {
+  removeFromFlow
+    ? (element.style.display = "none")
+    : (element.style.visibility = "hidden");
+}
+
 export {
   copyToClipboard,
   getSelectedText,
   isDarkMode,
   scrollToTop,
   scrollToBottom,
+  hideElement,
 };
