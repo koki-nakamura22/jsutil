@@ -13,4 +13,18 @@ function isDarkMode() {
   );
 }
 
-export { copyToClipboard, getSelectedText, isDarkMode };
+function scrollToTop(element) {
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function scrollToBottom(element) {
+  element.scrollIntoView({ behavior: "smooth", block: "end" });
+}
+
+export {
+  copyToClipboard,
+  getSelectedText,
+  isDarkMode,
+  scrollToTop,
+  scrollToBottom,
+};
