@@ -1,3 +1,5 @@
+"use strict";
+
 function isDateValid(...val) {
   return !Number.isNaN(new Date(...val).valueOf());
 }

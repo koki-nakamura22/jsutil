@@ -1,3 +1,5 @@
+"use strict";
+
 function getQueryParameters(urlStr) {
   const params = JSON.parse(
     '{"' +
