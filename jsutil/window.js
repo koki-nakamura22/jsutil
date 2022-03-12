@@ -13,12 +13,16 @@ function isDarkMode() {
   );
 }
 
-function scrollToTop(element) {
-  element.scrollIntoView({ behavior: "smooth", block: "start" });
+function scrollToTop(element = window) {
+  element === window
+    ? window.scroll({ top: 0, behavior: "smooth" })
+    : element.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function scrollToBottom(element) {
-  element.scrollIntoView({ behavior: "smooth", block: "end" });
+function scrollToBottom(element = window) {
+  element === window
+    ? window.scroll({ top: document.body.scrollHeight, behavior: "smooth" })
+    : element.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
 function hideElement(element, removeFromFlow = false) {
