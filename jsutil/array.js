@@ -4,7 +4,7 @@ function shuffleArray(arr) {
   return arr.sort(() => 0.5 - Math.random());
 }
 
-function removeDuplicates(arr) {
+function removeArrayDuplicates(arr) {
   return [...new Set(arr)];
 }
 
@@ -27,4 +27,4 @@ function divideArray(sourceArray, numOfDiv) {
   return dividedArray;
 }
 
-export { shuffleArray, removeDuplicates, isEmptyArray, divideArray };
+export { shuffleArray, removeArrayDuplicates, isEmptyArray, divideArray };

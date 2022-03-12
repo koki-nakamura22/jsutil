@@ -2,7 +2,7 @@
 
 import {
   shuffleArray,
-  removeDuplicates,
+  removeArrayDuplicates,
   isEmptyArray,
   divideArray,
 } from "../array.js";
@@ -14,17 +14,19 @@ it("shuffle array", () => {
   ]);
 });
 
-// removeDuplicates
+// removeArrayDuplicates
 it("remove array duplicates", () => {
-  expect(removeDuplicates([1, 2, 2, 3, 4, 4, 4, 5])).toEqual([1, 2, 3, 4, 5]);
+  expect(removeArrayDuplicates([1, 2, 2, 3, 4, 4, 4, 5])).toEqual([
+    1, 2, 3, 4, 5,
+  ]);
 });
 
 it("do not remove unnecesasry array duplicates", () => {
-  expect(removeDuplicates([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
+  expect(removeArrayDuplicates([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
 });
 
 it("remove duplicates with empty array", () => {
-  expect(removeDuplicates([])).toEqual([]);
+  expect(removeArrayDuplicates([])).toEqual([]);
 });
 
 // isEmptyArray
