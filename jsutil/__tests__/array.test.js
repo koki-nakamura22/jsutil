@@ -4,12 +4,14 @@ import {
   shuffleArray,
   removeDuplicates,
   isEmptyArray,
-  devideArray,
+  divideArray,
 } from "../array.js";
 
 // shuffleArray
 it("shuffle array", () => {
-  expect(shuffleArray([1, 2, 3, 4, 5])).not.toEqual([1, 2, 3, 4, 5]);
+  expect(shuffleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).not.toEqual([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+  ]);
 });
 
 // removeDuplicates
@@ -34,15 +36,31 @@ it("an array is not empty", () => {
   expect(isEmptyArray([1, 2, 3])).toBeFalsy();
 });
 
-// devideArray
-it("devide an array", () => {
-  expect(devideArray([1, 2, 3, 4, 5, 6, 7, 8], 3)).toEqual([
+// divideArray
+it("divide an array lacking", () => {
+  expect(divideArray([1, 2, 3, 4, 5, 6, 7, 8], 3)).toEqual([
     [1, 2, 3],
     [4, 5, 6],
     [7, 8],
   ]);
 });
 
-it("devide an empty array", () => {
-  expect(devideArray([], 3)).toEqual([]);
+it("divide an array even", () => {
+  expect(divideArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)).toEqual([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ]);
+});
+
+it("divide an array remainder", () => {
+  expect(divideArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)).toEqual([
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10],
+  ]);
+});
+
+it("divide an empty array", () => {
+  expect(divideArray([], 3)).toEqual([]);
 });

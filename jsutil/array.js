@@ -12,15 +12,19 @@ function isEmptyArray(arr) {
   return Array.isArray(arr) && arr.length === 0;
 }
 
-function devideArray(baseArr, numOfDiv) {
-  const baseArrLen = baseArr.length;
-  let newArr = [];
-  for (var i = 0; i < Math.ceil(baseArrLen / numOfDiv); i++) {
-    var j = i * numOfDiv;
-    var p = baseArr.slice(j, j + numOfDiv);
-    newArr.push(p);
+function divideArray(sourceArray, numOfDiv) {
+  let dividedArray = [];
+  for (let line = 0; line < numOfDiv; line++) {
+    let lineArray = [];
+    for (let i = 0; i < Math.ceil(sourceArray.length / numOfDiv); i++) {
+      const value =
+        sourceArray[i + line * Math.ceil(sourceArray.length / numOfDiv)];
+      if (!value) continue;
+      lineArray.push(value);
+    }
+    if (lineArray.length > 0) dividedArray.push(lineArray);
   }
-  return newArr;
+  return dividedArray;
 }
 
-export { shuffleArray, removeDuplicates, isEmptyArray, devideArray };
+export { shuffleArray, removeDuplicates, isEmptyArray, divideArray };
