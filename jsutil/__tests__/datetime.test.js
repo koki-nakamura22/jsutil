@@ -4,7 +4,7 @@ import {
   isDateValid,
   getDateOfYear,
   calcDayDiff,
-  timeFromDate,
+  extractTimeFromDate,
 } from "../datetime.js";
 
 // isDateValid
@@ -60,8 +60,8 @@ it("calc day diff (date1 < date2)", () => {
   expect(calcDayDiff(date1, date2)).toEqual(13);
 });
 
-// timeFromDate
+// extractTimeFromDate
 it("time from date", () => {
   jest.useFakeTimers().setSystemTime(new Date("2022/03/14 13:52:31").getTime());
-  expect(timeFromDate(new Date())).toEqual("13:52:31");
+  expect(extractTimeFromDate(new Date())).toEqual("13:52:31");
 });

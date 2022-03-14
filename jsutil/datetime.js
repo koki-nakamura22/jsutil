@@ -14,8 +14,8 @@ function calcDayDiff(date1, date2) {
   return Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000);
 }
 
-function timeFromDate(date) {
+function extractTimeFromDate(date) {
   return date.toTimeString().slice(0, 8);
 }
 
-export { isDateValid, getDateOfYear, calcDayDiff, timeFromDate };
+export { isDateValid, getDateOfYear, calcDayDiff, extractTimeFromDate };
