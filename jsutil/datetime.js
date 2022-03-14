@@ -1,7 +1,7 @@
 "use strict";
 
-function isDateValid(...val) {
-  return !Number.isNaN(new Date(...val).valueOf());
+function isDateValid(date) {
+  return !Number.isNaN(new Date(date).valueOf());
 }
 
 function getDateOfYear(date) {
