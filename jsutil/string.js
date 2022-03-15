@@ -5,13 +5,13 @@ function capitalize(str) {
 }
 
 function escapeHtml(str) {
-  let retStr = str.replace(/&/g, "&amp;");
-  retStr = retStr.replace(/>/g, "&gt;");
-  retStr = retStr.replace(/</g, "&lt;");
-  retStr = retStr.replace(/"/g, "&quot;");
-  retStr = retStr.replace(/'/g, "&#x27;");
-  retStr = retStr.replace(/`/g, "&#x60;");
-  return retStr;
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/>/g, "&gt;")
+    .replace(/</g, "&lt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;")
+    .replace(/`/g, "&#x60;");
 }
 
 export { capitalize, escapeHtml };
