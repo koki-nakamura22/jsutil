@@ -1,7 +1,7 @@
 "use strict";
 
 function getQueryParameters(urlStr) {
-  const params = JSON.parse(
+  return JSON.parse(
     '{"' +
       decodeURI(urlStr.split("?")[1])
         .replace(/"/g, '\\"')
@@ -9,7 +9,6 @@ function getQueryParameters(urlStr) {
         .replace(/=/g, '":"') +
       '"}'
   );
-  return JSON.stringify(params);
 }
 
 function getQueryParameter(urlStr, paramName) {
