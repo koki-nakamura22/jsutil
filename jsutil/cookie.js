@@ -1,5 +1,10 @@
 "use strict";
 
+/** @module cookie */
+
+/**
+ * Clear the browser cookies
+ */
 function clearCookies() {
   document.cookie
     .split(";")
