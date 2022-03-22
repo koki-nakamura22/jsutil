@@ -2,6 +2,11 @@
 
 /** @module function */
 
+/**
+ * Extract the function parameters names
+ * @param {Function} func
+ * @returns {Array} The function parameters names
+ */
 function extractFuncParamsNames(func) {
   const funcStr = func
     .toString()
