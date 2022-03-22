@@ -2,7 +2,7 @@
 
 /** @module function */
 
-function extractFunctionParameters(func) {
+function extractFuncParamsNames(func) {
   const funcStr = func
     .toString()
     .replace(/\/\*[\s\S]*?\*\//g, "") // Remove comments of the form /* ... */
@@ -30,4 +30,4 @@ function extractFunctionParameters(func) {
   return params;
 }
 
-export { extractFunctionParameters };
+export { extractFuncParamsNames };
