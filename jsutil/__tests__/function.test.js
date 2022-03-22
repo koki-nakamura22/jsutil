@@ -135,13 +135,10 @@ it("extract function params with async arrow function and no parameters", () => 
   expect(extractFunctionParameters(returnEmptyPromise)).toEqual([]);
 });
 
-// NG
 it("extract function params with arrow function and no default values", () => {
   const greeting = (name) => {
     console.info(`Hello! My name is ${name}!!!`);
   };
-  const r = extractFunctionParameters(greeting);
-  console.info(r);
   expect(extractFunctionParameters(greeting)).toEqual(["name"]);
 });
 
@@ -152,13 +149,10 @@ it("extract function params with arrow function, a parameter and a default value
   expect(extractFunctionParameters(greeting)).toEqual(["name"]);
 });
 
-// NG
 it("extract function params with async arrow function, a parameter and no default values", () => {
   const returnEmptyPromise = async (retValForResolve) => {
     return new Promise();
   };
-  const r = extractFunctionParameters(returnEmptyPromise);
-  console.info(r);
   expect(extractFunctionParameters(returnEmptyPromise)).toEqual([
     "retValForResolve",
   ]);
