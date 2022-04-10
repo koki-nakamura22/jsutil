@@ -26,19 +26,6 @@ it("deeply equivalent", () => {
   expect(obj).not.toStrictEqual(deepCopiedObj);
 });
 
-it("not deeply equivalent", () => {
-  const obj = {
-    name: "Taro",
-    address: {
-      postcode: 123,
-      city: "Mie",
-    },
-  };
-  const shallowCopiedObj = obj;
-  shallowCopiedObj.address.postcode = 456;
-  expect(obj).toStrictEqual(shallowCopiedObj);
-});
-
 // countNumberOfProperties
 it("count the properties the object has", () => {
   const user = {
