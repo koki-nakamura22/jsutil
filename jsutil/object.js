@@ -61,6 +61,20 @@ function removePropertyByValue(obj, value) {
  * @param {Object} props
  * @returns The object whose properties has been added.
  * @example
+ * // Pattern 1
+ * let user = {
+ *   name: "Koki",
+ * };
+ * user = addProperties(user, [{ age: 100 }, { address: "Mie" }]);
+ *
+ * // Pattern 2
+ * let user = {
+ *  name: "Koki",
+ * };
+ * user = addProperties(user, {
+ *   age: 100,
+ *   address: "Mie",
+ * });
  */
 function addProperties(obj, props) {
   if (Array.isArray(props)) {
