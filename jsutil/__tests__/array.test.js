@@ -5,6 +5,8 @@ import {
   removeArrayDuplicates,
   isEmptyArray,
   divideArray,
+  flattenArray,
+  removeArrayFalsyValues,
 } from "../array.js";
 
 // shuffleArray
@@ -65,4 +67,30 @@ it("divide an array remainder", () => {
 
 it("divide an empty array", () => {
   expect(divideArray([], 3)).toEqual([]);
+});
+
+// flattenArray
+it("flatten an array", () => {
+  expect(flattenArray(["cat", ["lion", "tiger"]])).toEqual([
+    "cat",
+    "lion",
+    "tiger",
+  ]);
+});
+
+// removeArrayFalsyValues
+it("remove falsy values from the array", () => {
+  expect(
+    removeArrayFalsyValues([
+      0,
+      "a string",
+      "",
+      NaN,
+      true,
+      5,
+      undefined,
+      "another string",
+      false,
+    ])
+  ).toEqual(["a string", true, 5, "another string"]);
 });
