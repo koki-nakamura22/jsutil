@@ -4,7 +4,7 @@
 
 /**
  * Shuffle the array.
- * @param {Array} arr 
+ * @param {Array} arr
  * @returns {Array} Returns the shuffled array.
  */
 function shuffleArray(arr) {
@@ -13,7 +13,7 @@ function shuffleArray(arr) {
 
 /**
  * Remove duplicate objects in the array.
- * @param {Array} arr 
+ * @param {Array} arr
  * @returns {Array} Returns the array with duplicates removed
  */
 function removeArrayDuplicates(arr) {
@@ -22,7 +22,7 @@ function removeArrayDuplicates(arr) {
 
 /**
  * Check if e array is empty or not.
- * @param {Array} arr 
+ * @param {Array} arr
  * @returns {Boolean} True: The array is empty. / False: The array is not empty.
  */
 function isEmptyArray(arr) {
@@ -31,8 +31,8 @@ function isEmptyArray(arr) {
 
 /**
  * Divide the array by the number of numOfDiv's value.
- * @param {Array} sourceArray 
- * @param {Number} numOfDiv 
+ * @param {Array} sourceArray
+ * @param {Number} numOfDiv
  * @example
  * // return [
  *  [1, 2, 3],
@@ -56,4 +56,32 @@ function divideArray(sourceArray, numOfDiv) {
   return dividedArray;
 }
 
-export { shuffleArray, removeArrayDuplicates, isEmptyArray, divideArray };
+/**
+ * Flatten the array.
+ * @param {Array} arr
+ * @returns {Array} The flattened array.
+ */
+function flattenArray(arr) {
+  return [].concat.apply(
+    [],
+    arr.map((a) => (Array.isArray(a) ? flattenArray(a) : a))
+  );
+}
+
+/**
+ * Remove falsy values from the array.
+ * @param {Array} arr
+ * @returns {Array} The array with falsy values removed.
+ */
+function removeArrayFalsyValues(arr) {
+  return arr.filter(Boolean);
+}
+
+export {
+  shuffleArray,
+  removeArrayDuplicates,
+  isEmptyArray,
+  divideArray,
+  flattenArray,
+  removeArrayFalsyValues,
+};

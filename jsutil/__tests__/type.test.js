@@ -8,7 +8,9 @@ import {
   isEqualAllTypes,
 } from "../type.js";
 
-// getTypeStr
+/**
+ * getTypeStr
+ */
 it("detect the type of Boolean object", () => {
   expect(getTypeStr(true)).toBe("Boolean");
 });
@@ -42,7 +44,9 @@ it("detect the type of a user implemented class object as 'object type'", () => 
   expect(getTypeStr(new TestClass())).toBe("Object");
 });
 
-// getClassNameStr
+/**
+ * getClassNameStr
+ */
 it("detect the class name of Boolean", () => {
   expect(getClassNameStr(true)).toBe("Boolean");
 });
@@ -76,7 +80,9 @@ it("detect the class name of a user implemented class", () => {
   expect(getClassNameStr(new TestClass())).toBe("TestClass");
 });
 
-// getTypeStrLoosely
+/**
+ * getTypeStrLoosely
+ */
 it("detect the class name of Boolean", () => {
   expect(getTypeStrLoosely(true)).toBe("Boolean");
 });
@@ -110,7 +116,9 @@ it("detect the class name of a user implemented class", () => {
   expect(getTypeStrLoosely(new TestClass())).toBe("TestClass");
 });
 
-// isEqualType
+/**
+ * isEqualType
+ */
 it("compare type between the same type objects", () => {
   expect(isEqualType(123, 456)).toBeTruthy();
 });
@@ -120,7 +128,9 @@ it("compare type between different types of objects", () => {
   expect(isEqualType(123, new TestClass())).toBeFalsy();
 });
 
-// isEqualAllTypes
+/**
+ * isEqualAllTypes
+ */
 it("compare type between the same type objects in the array", () => {
   const arr = [123, 456, 789, 0];
   expect(isEqualAllTypes(arr)).toBeTruthy();

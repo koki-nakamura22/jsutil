@@ -2,12 +2,21 @@
 
 import { capitalize, escapeHtml } from "../string.js";
 
-// capitalize
+/**
+ * capitalize
+ */
 it("capitalize string", () => {
   expect(capitalize("my name is taro.")).toEqual("My name is taro.");
 });
 
-// escapeHtml
+/**
+ * generateRandomString
+ * Do not need the test because of just generate a random string.
+ */
+
+/**
+ * escapeHtml
+ */
 it("escapte html code", () => {
   expect(
     escapeHtml(`<html>

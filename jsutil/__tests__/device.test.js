@@ -1,6 +1,6 @@
 "use strict";
 
-import { detectDeviceType, isMobile, isDesktop } from "../device.js";
+import { isMobile, isDesktop } from "../device.js";
 
 function setMockUserAgent(mockUserAgent) {
   const userAgentForRestore = window.navigator.userAgent;
@@ -22,10 +22,14 @@ function setMockUserAgent(mockUserAgent) {
   return restore;
 }
 
-// detectDeviceType
-// This function's test is not needed because it includes in isMobile and isDesktop functions.
+/**
+ * detectDeviceType
+ * This function's test is not needed because it includes in isMobile and isDesktop functions.
+ */
 
-// isMobile
+/**
+ * isMobile
+ */
 it("device type is mobile (Android Phone)", () => {
   const restore = setMockUserAgent(
     "Mozilla/5.0 (Linux; {Android Version}; {Build Tag etc.}) AppleWebKit/{WebKit Rev} (KHTML, like Gecko) Chrome/{Chrome Rev} Mobile Safari/{WebKit Rev}"
@@ -109,7 +113,9 @@ describe.each([
   restore();
 });
 
-// isDesktop
+/**
+ * isDesktop
+ */
 describe.each([
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36", // Windows
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML%2C like Gecko) Home Assistant/2022.3 (io.robbie.HomeAssistant; build:2022.358; macOS 11.6.0) Mobile/HomeAssistant%2C like Safari", // Mac (Intel)

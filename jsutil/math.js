@@ -4,7 +4,7 @@
 
 /**
  * Check if the num is even or not.
- * @param {Number} num 
+ * @param {Number} num
  * @returns {Boolean} True: Even. / False: Not even.
  */
 function isEven(num) {
@@ -13,7 +13,7 @@ function isEven(num) {
 
 /**
  * Calculate the average of the numbers function for only used in this file.
- * @param {Array} numbers 
+ * @param {Array} numbers
  * @returns {Number} Average value.
  */
 function __average(numbers) {
@@ -22,7 +22,7 @@ function __average(numbers) {
 
 /**
  * Calculate the average of the numbers.
- * @param  {...number} numbers 
+ * @param  {...number} numbers
  * @returns {Number} Average value.
  */
 function average(...numbers) {
@@ -31,11 +31,21 @@ function average(...numbers) {
 
 /**
  * Calculate the average of the numbers in the array.
- * @param {Array} arr 
+ * @param {Array} arr
  * @returns {Number} Average value.
  */
 function averageArray(arr) {
   return __average(arr);
 }
 
-export { isEven, average, averageArray };
+/**
+ * Generate the random number between two numbers.
+ * @param {Number} min
+ * @param {Number} max
+ * @returns {Number} Random value.
+ */
+function randomBetweenTwoNumbers(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+export { isEven, average, averageArray, randomBetweenTwoNumbers };
