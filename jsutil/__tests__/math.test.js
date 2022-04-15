@@ -1,6 +1,11 @@
 "use strict";
 
-import { isEven, average, averageArray } from "../math.js";
+import {
+  isEven,
+  average,
+  averageArray,
+  randomBetweenTwoNumbers,
+} from "../math.js";
 
 // isEven
 it("num is even", () => {
@@ -28,3 +33,6 @@ it("average an array (result is integer)", () => {
 it("average an array (result is decimal)", () => {
   expect(averageArray([1, 3, 4])).toEqual(2.6666666666666665);
 });
+
+// randomBetweenTwoNumbers
+// Do not need the test because of just generate a random number.
