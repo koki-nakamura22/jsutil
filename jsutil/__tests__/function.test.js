@@ -2,7 +2,9 @@
 
 import { extractFuncParamsNames } from "../function.js";
 
-// extractFuncParamsNames (with function keyword)
+/**
+ * extractFuncParamsNames (with function keyword)
+ */
 it("extract function params with function keyword and no parameters", () => {
   function greeting() {
     console.info("Hello!");
@@ -120,7 +122,9 @@ it("extract function params with async and function keyword, rest parameters", (
   expect(extractFuncParamsNames(showParams)).toEqual(["...params"]);
 });
 
-// extractFuncParamsNames (arrow function)
+/**
+ * extractFuncParamsNames (arrow function)
+ */
 it("extract function params with arrow function and no parameters", () => {
   const greeting = () => {
     console.info("Hello!");

@@ -12,7 +12,9 @@ import {
   convertBoolToNumber,
 } from "../object.js";
 
-// deepCopy
+/**
+ * deepCopy
+ */
 it("deeply equivalent", () => {
   const obj = {
     name: "Taro",
@@ -26,7 +28,9 @@ it("deeply equivalent", () => {
   expect(obj).not.toStrictEqual(deepCopiedObj);
 });
 
-// countNumberOfProperties
+/**
+ * countNumberOfProperties
+ */
 it("count the properties the object has", () => {
   const user = {
     name: "Koki",
@@ -41,7 +45,9 @@ it("count the properties, but the object has anything", () => {
   expect(countNumberOfProperties(num)).toBe(0);
 });
 
-// removeProperty
+/**
+ * removeProperty
+ */
 it("remove the property from the object", () => {
   let user = {
     name: "Koki",
@@ -66,7 +72,9 @@ it("remove the property the object does not have it from the object", () => {
   expect(user.hasOwnProperty("address")).toBeTruthy();
 });
 
-// removeProperties
+/**
+ * removeProperties
+ */
 it("remove the properties from the object", () => {
   let user = {
     name: "Koki",
@@ -91,7 +99,9 @@ it("remove the properties the object does not have them from the object", () => 
   expect(user.hasOwnProperty("address")).toBeTruthy();
 });
 
-// removePropertyByValue
+/**
+ * removePropertyByValue
+ */
 it("remove the property by the value", () => {
   let user = {
     name: "Koki",
@@ -116,7 +126,9 @@ it("remove the property the object does not have by the value", () => {
   expect(user.hasOwnProperty("address")).toBeTruthy();
 });
 
-// addProperties
+/**
+ * addProperties
+ */
 it("add the properties as JSON object array to the object", () => {
   let user = {
     name: "Koki",
@@ -140,7 +152,9 @@ it("add the properties as JSON object to the object", () => {
   expect(user.address).toBe("Mie");
 });
 
-// changePropertyValues
+/**
+ * changePropertyValues
+ */
 it("change the values", () => {
   let user = {
     name: "Koki",
@@ -153,7 +167,9 @@ it("change the values", () => {
   expect(user.phone).toBe(-1);
 });
 
-// convetStringToNumber
+/**
+ * convetStringToNumber
+ */
 it("convert the string values to the number values", () => {
   let user = {
     name: "Koki",
@@ -168,7 +184,9 @@ it("convert the string values to the number values", () => {
   expect(user.weight).toBe(50);
 });
 
-// convertBoolToNumber
+/**
+ * convertBoolToNumber
+ */
 it("convert the boolean values to the number values", () => {
   let user = {
     name: "Koki",

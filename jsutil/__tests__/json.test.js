@@ -35,7 +35,9 @@ const jsonObjectForTest2 = {
   },
 };
 
-// isJsonObject
+/**
+ * isJsonObject
+ */
 it("undefined is not JSON object", () => {
   expect(isJsonObject(undefined)).toBeFalsy();
 });
@@ -52,7 +54,9 @@ it("JSON object is JSON object", () => {
   expect(isJsonObject(jsonObjectForTest1)).toBeTruthy();
 });
 
-// isEqualJsonObjects
+/**
+ * isEqualJsonObjects
+ */
 it("Compare undefined and JSON object1", () => {
   expect(isEqualJsonObjects(jsonObjectForTest1, undefined)).toBeFalsy();
 });

@@ -26,18 +26,16 @@ const asyncFuncReject = async () => {
   });
 };
 
-// getPromiseState
+/**
+ * getPromiseState
+ */
 it("Promise state is pending", async () => {
-  expect.assertions(1);
-
   const promise = asyncFuncResolve();
   const promiseState = await getPromiseState(promise);
   expect(promiseState).toBe("pending");
 });
 
 it("Promise state is fulfilled", async () => {
-  expect.assertions(1);
-
   const promise = asyncFuncResolve();
   jest.runOnlyPendingTimers();
   const result = await promise;
@@ -46,8 +44,6 @@ it("Promise state is fulfilled", async () => {
 });
 
 it("Promise state is reject", async () => {
-  expect.assertions(1);
-
   const promise = asyncFuncReject();
   try {
     jest.runOnlyPendingTimers();

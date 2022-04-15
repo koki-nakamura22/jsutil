@@ -25,7 +25,9 @@ function setMockCurrentURL(mockCurrentURL) {
   return restore;
 }
 
-// getQueryParameters
+/**
+ * getQueryParameters
+ */
 it("get query parameters from url which has only one query parameter", () => {
   expect(getQueryParameters("https://hoge.com?param1=value1")).toEqual({
     param1: "value1",
@@ -41,14 +43,18 @@ it("get query parameters from url which has multiple query parameters", () => {
   });
 });
 
-// getQueryParameter
+/**
+ * getQueryParameter
+ */
 it("get a query parameter from url", () => {
   expect(
     getQueryParameter("https://hoge.com?param1=value1&param2=123", "param2")
   ).toEqual("123");
 });
 
-// getQueryParameterCurrentURL
+/**
+ * getQueryParameterCurrentURL
+ */
 it("get a query parameter from current url", () => {
   const restore = setMockCurrentURL(
     "https://hoge.com?param1=value1&param2=123"
